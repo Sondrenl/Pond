@@ -1,0 +1,20 @@
+# Rust build artifacts
+target/
+**/*.rs.bk
+*.pdb
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# IDE & Editor settings
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# AI & Assistant metadata
+.gemini/
+.agents/

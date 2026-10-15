@@ -1,0 +1,28 @@
+[package]
+name = "pond"
+version = "0.1.0"
+edition = "2021"
+authors = ["Sondre Lassen"]
+description = "Minimal, resource-efficient interactive transparent virtual koi pond for macOS"
+
+[dependencies]
+winit = { version = "0.30.13" }
+tiny-skia = { version = "0.11.4" }
+core-graphics = { version = "0.23.2" }
+objc2 = { version = "0.5.3" }
+objc2-foundation = { version = "0.2.2" }
+objc2-app-kit = { version = "0.2.2", features = [
+    "NSWindow",
+    "NSColor",
+    "NSView",
+    "NSScreen",
+    "NSApplication",
+    "NSResponder"
+] }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
